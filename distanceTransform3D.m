@@ -5,9 +5,9 @@ function [voxels] = distanceTransform3D(voxels, flag_debug)
 
 %% setup space
 voxels_orig=voxels;
-xgv = linspace(-1.2,1.2,size(voxels,1));%-1.2:cell_sz:1.2;
-ygv = linspace(-1.2,1.2,size(voxels,2));%-1.2:cell_sz:1.2;
-zgv = linspace(-1.2,1.2,size(voxels,3));%:cell_sz:1.2;
+xgv = linspace(-1.0,1.0,size(voxels,1));%-1.2:cell_sz:1.2;
+ygv = linspace(-1.0,1.0,size(voxels,2));%-1.2:cell_sz:1.2;
+zgv = linspace(-1.0,1.0,size(voxels,3));%:cell_sz:1.2;
 
 ids_ones = find(voxels==1);
 [v,u,zz] = ind2sub([length(xgv) length(ygv) length(zgv)], ids_ones);
